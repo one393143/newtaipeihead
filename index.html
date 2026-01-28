@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新北市各機關首長清冊</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+TC:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <h1>新北市各機關首長清冊</h1>
+            <p class="subtitle">New Taipei City Government Agency Heads</p>
+        </div>
+    </header>
+
+    <div class="search-container">
+        <div class="container">
+            <input type="text" id="searchInput" placeholder="搜尋姓名、職稱或機關名稱..." autocomplete="off">
+
+            <div class="controls">
+                <div class="size-controls">
+                    <button class="btn-size" onclick="changeSize('small')">小</button>
+                    <button class="btn-size" onclick="changeSize('medium')">中</button>
+                    <button class="btn-size active" onclick="changeSize('large')">大</button>
+                </div>
+                <button class="btn-reset" onclick="resetVisited()">復原 (重新整理)</button>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+        <div id="official-grid" class="grid">
+            <!-- Cards will be injected here by JS -->
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; New Taipei City Government Directory. Unofficial/Demo.</p>
+        </div>
+    </footer>
+
+    <script src="data/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
